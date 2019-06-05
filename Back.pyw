@@ -76,7 +76,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def map(self):
 
         try:
-            URL = 'https://www.google.com/maps/Uruguay,"{}","{}"'.format(self.dep, self.direccion.text())
+            URL = 'https://www.google.com/maps/place/Uruguay,"{}","{}"'.format(self.dep[0][0], self.direccion.text())
             self.google.load(QtCore.QUrl(URL))
             if self.hide == True:
                 self.google.show()
